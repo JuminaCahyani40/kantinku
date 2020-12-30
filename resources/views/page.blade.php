@@ -12,6 +12,9 @@
     <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
     <!--Replace with your tailwind.css once created-->
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
 
     <style>
         .worksans {
@@ -65,6 +68,30 @@
             color: #000;
             /*Set to match the Tailwind colour you want the active one to be */
         }
+        .fa {
+            padding: 15px;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 5px;
+
+            }
+        .fa:hover {
+            opacity: 0.7;
+            }
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+            }
+        .fa-instagram {
+            background: #e95325;
+            color: white;
+            }
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+            }
     </style>
 
 </head>
@@ -126,8 +153,9 @@
         <div class="carousel-inner relative overflow-hidden w-full">
             <!--Slide 1-->
             <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
-            <div class="carousel-item absolute opacity-0" style="height:50vh;">
-                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('{{asset('img/banner/diskon.png')}}');">
+            <div class="carousel-item absolute opacity-0" style="height:60vh;">
+                <div class="block h-full w-full mx-auto flex pt-6 md:pt-
+                n0 md:items-center bg-cover bg-right" style="background-image: url('{{asset('img/banner/kantin.png')}}');">
 
                     <div class="container mx-auto">
                         <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
@@ -143,12 +171,11 @@
 
             <!--Slide 2-->
             <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
-            <div class="carousel-item absolute opacity-0 bg-cover bg-right" style="height:50vh;">
-                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjM0MTM2fQ&auto=format&fit=crop&w=1600&q=80');">
+            <div class="carousel-item absolute opacity-0 bg-cover bg-right" style="height:60vh;">
+                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('{{asset('img/banner/kantin2.png')}}');">
 
                     <div class="container mx-auto">
                         <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
-                            <p class="text-black text-2xl my-4">Real Bamboo Wall Clock</p>
                             <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="#">view product</a>
                         </div>
                     </div>
@@ -160,12 +187,11 @@
 
             <!--Slide 3-->
             <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
-            <div class="carousel-item absolute opacity-0" style="height:50vh;">
-                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-bottom" style="background-image: url('https://images.unsplash.com/photo-1519327232521-1ea2c736d34d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80');">
+            <div class="carousel-item absolute opacity-0" style="height:60vh;">
+                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-bottom" style="background-image: url('{{asset('img/banner/kantin3.png')}}');">
 
                     <div class="container mx-auto">
                         <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
-                            <p class="text-black text-2xl my-4">Brown and blue hardbound book</p>
                             <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="#">view product</a>
                         </div>
                     </div>
@@ -218,7 +244,7 @@ Alternatively if you want to just have a single hero
             <nav id="store" class="w-full z-30 top-0 px-6 py-1">
                 <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
 
-                    <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl " href="#">
+                    <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl " style="text-align: center" href="#">
 				Store
 			</a>
 
@@ -354,15 +380,10 @@ Alternatively if you want to just have a single hero
 
         <div class="container py-8 px-6 mx-auto">
 
-            <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8" href="#">
-			About
-		</a>
-
-            <p class="mt-8 mb-8">This template is inspired by the stunning nordic minamalist design - in particular:
-                <br>
-                <a class="text-gray-800 underline hover:text-gray-900" href="http://savoy.nordicmade.com/" target="_blank">Savoy Theme</a> created by <a class="text-gray-800 underline hover:text-gray-900" href="https://nordicmade.com/">https://nordicmade.com/</a> and <a class="text-gray-800 underline hover:text-gray-900" href="https://www.metricdesign.no/" target="_blank">https://www.metricdesign.no/</a></p>
-
-            <p class="mb-8">Lorem ipsum dolor sit amet, consectetur <a href="#">random link</a> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vel risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Vitae aliquet nec ullamcorper sit. Nullam eget felis eget nunc lobortis mattis aliquam. In est ante in nibh mauris. Egestas congue quisque egestas diam in. Facilisi nullam vehicula ipsum a arcu. Nec nam aliquam sem et tortor consequat. Eget mi proin sed libero enim sed faucibus turpis in. Hac habitasse platea dictumst quisque. In aliquam sem fringilla ut. Gravida rutrum quisque non tellus orci ac auctor augue mauris. Accumsan lacus vel facilisis volutpat est velit egestas dui id. At tempor commodo ullamcorper a. Volutpat commodo sed egestas egestas fringilla. Vitae congue eu consequat ac.</p>
+            <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-black-800 text-xl mb-8" style="text-align: center" href="#">
+            About</a> <br>
+            <p class="mb-8 text-gray-700" style="text-align: left">E-Kantin merupakan aplikasi berbasis web yang memberikan kemudahan konsumen khususnya mahasiswa ITK dalam melakukan pemesanan, karena tidak perlu datang untuk memesan dan kemudahan dalam melakukan pembayaran. E-kantin juga memudahkan penjual dalam mengelola pesanan dan memberikan kemudahan dalam menjalankan proses transaksi.</p>
+            <p class="mb-8 text-gray-700" style="text-align: left">E-Kantin juga menyediakan bagi penjual untuk mempromosikan jualannya ketika terdapat diskon atau apapun. Promosi tersebut akan diletakkan di landing page E-Kantin ITK. Hal tersebut akan mempermudah bagi pembeli atau civitas akademika ITK yang sedang menyerbu diskon. Selain itu pembeli juga dapat lebih mudah dalam melihat dan mencari nama penjualnya.</p>
 
         </div>
 
@@ -370,29 +391,42 @@ Alternatively if you want to just have a single hero
 
     <footer class="container mx-auto bg-white py-8 border-t border-gray-400">
         <div class="container flex px-3 py-8 ">
-            <div class="w-full mx-auto flex flex-wrap">
-                <div class="flex w-full lg:w-1/2 ">
+           {{--<div class="w-full mx-auto flex flex-wrap">--}}
+                <div class="flex w-full lg:w-2/5 lg:justify">
                     <div class="px-3 md:px-0">
-                        <h3 class="font-bold text-gray-900">About</h3>
+                        <h3 class="font-bold text-gray-900" style="text-align: center">Social Media</h3>
                         <p class="py-4">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel mi ut felis tempus commodo nec id erat. Suspendisse consectetur dapibus velit ut lacinia.
+                            Connect With Us On The Social Network
+                        </p>
+                        <p class="py-5" style="text-align: center">
+                            <a href="#" class="fa fa-facebook"></a>
+                            <a href="#" class="fa fa-twitter"></a>
+                            <a href="#" class="fa fa-instagram"></a>
+                        </p>
+                      
+                    </div>
+                </div>
+                <div class="flex w-full lg:w-2/6 lg:justify lg:text-center">
+                    <div class="px-3 md:px-0">
+                        <h3 class="font-bold text-gray-900" style="text-align: center">Contact Us</h3>
+                        <p class="py-6">
+                            <i class="fa fa-phone" style="font-size:36px; color: black"></i>087453569012 <br>
+                            <i class="fa fa-envelope" style="font-size:36px; color:red"></i>kantinitk@gmail.com
                         </p>
                     </div>
                 </div>
-                <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right">
+                <div class="flex w-full lg:w-2/5 lg:justify lg:text-center">
                     <div class="px-3 md:px-0">
-                        <h3 class="font-bold text-gray-900">Social</h3>
-                        <ul class="list-reset items-center pt-3">
-                            <li>
-                                <a class="inline-block no-underline hover:text-black hover:underline py-1" href="#">Add social links</a>
-                            </li>
-                        </ul>
+                        <h3 class="font-bold text-gray-900" style="text-align: center">About Us</h3>
+                        <p class="py-6">E-Kantin merupakan website untuk pemesanan makanan dan minuman di kantin ITK secara online</p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-
+    <div class="w3-container w3-teal" style="text-align: center">
+        <p>COPYRIGHT &#169; 2020. Group 3. All Rights Reversed.</p>
+    </div>
 </body>
 
 </html>
